@@ -19,24 +19,46 @@
     
  <title>Neural Nexus</title>
     <link rel="stylesheet" href="styles.css">
-</head>
 
 
     
 </head>
 <body>
-<div id="hamburger-menu">☰</div>
-<div class="side-panel">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
+    <div class="background"></div>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav class="hamburger-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Scientific Research ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">AI Bot</a></li>
+                        <li><a href="#">Video Exploration</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Projects ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">AI Assistance</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".hamburger-menu");
             menu.classList.toggle("active");
         }
     </script>
-
+        }
+    
 <div class="wrapper">
 <!-- About Us Section -->
 <section id="about" class="section">
