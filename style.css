@@ -1,6 +1,6 @@
-/* General Styles */
+ /* General Styles */
 body {
-    font-family: Arial, Apots;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f5f1;
@@ -12,15 +12,12 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(0, 123, 255, 0.5); /* Transparent background */
+    background-color: #007BFF;
     color: white;
     padding: 10px 20px;
     text-align: center;
-    backdrop-filter: blur(10px); /* Glass effect */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Link Styles */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -30,7 +27,55 @@ a:hover {
     color: #0056b3;
 }
 
-/* Hamburger Menu Icon */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('backround2.jpg') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2, h3 {
+    color: green; /* Green for headings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Content Area */
+#main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Paragraphs */
+p {
+    color: black; /* Black text for readability */
+}
+
+/* Side Panel */
 #hamburger-menu {
     font-size: 30px;
     cursor: pointer;
@@ -43,7 +88,6 @@ a:hover {
     z-index: 100;
 }
 
-/* Side Panel (Hamburger Menu) */
 .side-panel {
     height: 100%;
     width: 250px;
@@ -81,68 +125,6 @@ a:hover {
     left: 0;
 }
 
-/* Background with Glass Effect */
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('backround.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    z-index: -1;
-}
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url('backround2.jpg') center center / cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.hero-content {
-    color: white;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-h2, h3 {
-    color: green;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* Content Area */
-#main-content {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Paragraphs */
-p {
-    color: black;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -157,14 +139,43 @@ footer span {
     margin-top: 10px;
 }
 
+/* Contact Info Section */
+.contact-info {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 0; /* No boxy borders */
+}
+
+.contact-info a {
+    color: #FFD700; /* Gold color for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #FFA500; /* Orange on hover */
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the image */
+}
+
+/* Wrapper for consistency */
+.wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    border: none; /* No borders */
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Adjust hero section */
-    .hero-section {
-        min-height: 80vh;
-        padding: 10px;
-    }
-
     .hero-content {
         width: 90%;
         padding: 15px;
@@ -178,16 +189,12 @@ footer span {
         font-size: 1rem;
     }
 
-    /* Hamburger Menu Icon */
     #hamburger-menu {
         font-size: 25px;
-        left: 15px;
-        top: 15px;
     }
 
-    /* Side Panel */
     .side-panel {
-        width: 70%; /* Wider on mobile */
+        width: 200px;
     }
 
     footer {
@@ -196,11 +203,6 @@ footer span {
 }
 
 @media (max-width: 480px) {
-    /* Adjust hero section even more */
-    .hero-section {
-        min-height: 70vh;
-    }
-
     .hero-content {
         width: 95%;
     }
@@ -212,11 +214,41 @@ footer span {
     p {
         font-size: 0.9rem;
     }
+}
+#aviator-simulator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-    /* Hamburger Menu Icon */
-    #hamburger-menu {
-        font-size: 20px;
-        left: 10px;
-        top: 10px;
-    }
+#aviator-simulator label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#aviator-simulator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#aviator-simulator button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#aviator-simulator button:hover {
+    background-color: #0056b3;
 }
