@@ -3,40 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mnisi Kholofelo's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore algae at Port Elizabeth Beach. Discover their evolutionary connection to larger plants and marine life. Also explore AI assistance for forex trading and Jarvis-style bots for personal use." />
     <meta name="keywords" content="algae, Port Elizabeth, Gqeberha, marine life, evolution, plant ancestors, forex bot, AI, Jarvis, trading assistance" />
-    <meta name="author" content="Tsholofelo" />
-    <meta property="og:title" content="Algae Exploration & AI Forex Assistance" />
+    <meta name="author" content="Kholofelo" />
+    
+    <meta property="og:title" content="Neural Nexus" />
     <meta property="og:description" content="Explore the fascinating algae of Port Elizabeth, Gqeberha, and how they may be ancestors to larger plants. Also discover AI-powered forex bots and trading assistance tools." />
-    <meta property="og:image" content="image.jpg" /> <!-- Replace with your image URL -->
-    <meta property="og:url" content="https://yourwebsite.com" /> <!-- Replace with your website URL -->
+    <meta property="og:image" content="1A&AI.jpg" />
+    <meta property="og:url" content="https://mnisi-k.github.io/Bio-tech-integration/" />
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Algae Exploration & AI Forex Assistance" />
     <meta name="twitter:description" content="Explore the fascinating algae of Port Elizabeth, Gqeberha, and how they may be ancestors to larger plants. Also discover AI-powered forex bots and trading assistance tools." />
-    <meta name="twitter:image" content="image.jpg" /> <!-- Replace with your image URL -->
-
-    <title>Algae Exploration & AI Forex Assistance</title>
-
-    <!-- External CSS Link (for styling) -->
+   <meta name="twitter:image" content="https://mnisi-k.github.io/Bio-tech-integration/2T&B.jpg" />
+    
+    <title>Neural Nexus</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
     
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Effect Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('menu.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(40%);
+            z-index: -1;
+        }
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .hamburger-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .hamburger-menu.active {
+            display: block;
+        }
+        .hamburger-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hamburger-menu ul li {
+            padding: 10px 0;
+        }
+        .hamburger-menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .dropdown-menu {
+            display: none;
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<div id="hamburger-menu">☰</div>
-<div class="side-panel">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
+    <div class="background"></div>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav class="hamburger-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Biology Research ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Genetics</a></li>
+                        <li><a href="#">Microbiology</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".hamburger-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
+
 
 <!-- Header Section -->
 <header class="hero-section">
