@@ -17,81 +17,22 @@
     <meta name="twitter:description" content="Explore the fascinating algae of Port Elizabeth, Gqeberha, and how they may be ancestors to larger plants. Also discover AI-powered forex bots and trading assistance tools." />
     <meta name="twitter:image" content="https://mnisi-k.github.io/Bio-tech-integration/2T&B.jpg" />
     
-    <title>Neural Nexus</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            color: white;
-        }
-        .hamburger-menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 15px;
-        }
-        .hamburger-menu.active {
-            display: block;
-        }
-        .hamburger-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .hamburger-menu ul li {
-            padding: 10px 0;
-        }
-        .hamburger-menu ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-        .dropdown-menu {
-            display: none;
-            margin-top: 5px;
-            padding-left: 10px;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+ <title>Neural Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+    
 </head>
 <body>
-    <div class="background"></div>
-    <header>
-        <div class="menu-icon" onclick="toggleMenu()">
-            &#9776;
-        </div>
-        <nav class="hamburger-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Scientific Research ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">AI Bot</a></li>
-                        <li><a href="#">Video Exploration</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#">Projects ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">AI Assistance</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector(".hamburger-menu");
+<div id="hamburger-menu">☰</div>
+<div class="side-panel">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
             menu.classList.toggle("active");
         }
     </script>
