@@ -88,7 +88,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('menu.jpg'); /* Replace with your image */
+    background-image: url('backround.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     filter: blur(5px);
