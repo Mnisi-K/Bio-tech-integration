@@ -1,13 +1,3 @@
-@keyframes popIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* General Styles */
 :root {
@@ -357,34 +347,13 @@ footer span {
 
 /* Images in Content (Professional Sizing) */
 img {
-    max-width: 600px;
+    max-width: auto;
     height: auto;
     display: block;
     margin: 20px auto; /* More margin around images */
     border-radius: 8px; /* Slightly rounded corners for images */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
     object-fit: contain; /* Ensures entire image is visible, scales down if needed */
-}
-
----
-## Trading Bot Animation Styles
----
-
-/* Animation Container */
-.trading-bot-animation-section {
-    width: 100%;
-    max-width: 900px; /* Limit max width for a contained scene */
-    height: 400px; /* Fixed height for the animation viewport */
-    position: relative;
-    overflow: hidden; /* Hide anything outside the container */
-    margin: 50px auto; /* Center the animation */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #1a2a3a, #2a3a4a); /* Darker background for depth */
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align elements to the bottom of the container */
-    animation: fadeInScale 1.5s ease-out forwards; /* Initial fade-in */
 }
 
 @keyframes fadeInScale {
@@ -406,275 +375,46 @@ img {
     z-index: 1;
 }
 
-/* Candlestick Chart (positioned on the floor) */
-.candlestick-chart {
-    position: absolute;
-    bottom: 50px; /* Above the floor */
-    left: 50%;
-    transform: translateX(-50%); /* Center the chart */
-    display: flex;
-    align-items: flex-end;
-    height: 250px; /* Max height for chart area */
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-    padding: 5px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    overflow: hidden; /* Important for newly generated candles */
-}
-
-.candlestick {
-    width: 10px; /* Matches JS candleWidth */
-    margin: 0 2px; /* Matches JS gap / 2 for each side */
-    background-color: var(--chart-green); /* Default green (bullish) */
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    transition: height 0.3s ease-out; /* Smooth height change */
-    /* Add a subtle animation to make them "breathe" slightly */
-    animation: candlePulse 2s infinite alternate ease-in-out;
-    transform-origin: bottom; /* Ensure it scales from the bottom */
-}
-
-.candlestick.bearish {
-    background-color: var(--chart-red); /* Red for bearish */
-}
-
-@keyframes candlePulse {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(1.02); }
-}
-
-/* Trading Bot */
-.bot-character {
-    position: absolute;
-    bottom: 55px; /* Slightly above the floor */
-    left: 15%; /* Position to the left */
-    width: 80px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 3;
-    animation: botIdle 4s ease-in-out infinite alternate; /* Gentle idle animation */
-}
-
-.bot-body {
-    width: 70px;
-    height: 70px;
-    background-color: var(--bot-color-primary);
-    border-radius: 50% 50% 10px 10px; /* Rounded top, flatter bottom */
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 1;
-}
-
-.bot-head {
-    width: 60px;
-    height: 60px;
-    background-color: var(--bot-color-secondary);
-    border-radius: 50%;
-    position: absolute;
-    top: -20px; /* Overlap with body */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    animation: headBob 3s ease-in-out infinite alternate; /* Head movement */
-}
-
-.bot-eye {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
-    animation: eyeBlink 5s infinite;
-}
-
-.bot-eye.left {
-    left: 15px;
-}
-
-.bot-eye.right {
-    right: 15px;
-}
-
-.computer-screen {
-    position: absolute;
-    top: 15px; /* Adjust based on bot head size */
-    width: 80%;
-    height: 35%;
-    background-color: #0d1e2e; /* Dark screen background */
-    border-radius: 5px;
-    border: 1px solid #1e3a53;
-    color: #00FF00; /* Green text for screen */
-    font-family: 'Press Start 2P', monospace; /* Pixelated font if imported, otherwise monospace */
-    font-size: 0.6em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Hide overflowing text */
-    text-align: center;
-    padding: 2px;
-    box-sizing: border-box;
-    box-shadow: inset 0 0 5px rgba(0,255,0,0.3);
-}
-
-.bot-arm {
-    width: 15px;
-    height: 40px;
-    background-color: var(--bot-color-secondary);
-    position: absolute;
-    top: 40px;
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-    animation: armMove 3s ease-in-out infinite alternate;
-}
-
-.bot-arm.left {
-    left: 5px;
-    transform-origin: top center;
-    transform: rotate(10deg);
-}
-
-.bot-arm.right {
-    right: 5px;
-    transform-origin: top center;
-    transform: rotate(-10deg);
-}
-
-/* Bot Animations */
-@keyframes botIdle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-@keyframes headBob {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-3px) rotate(2deg); }
-}
-
-@keyframes eyeBlink {
-    0%, 20%, 40%, 60%, 80%, 100% { transform: scaleY(1); }
-    10%, 30%, 50% { transform: scaleY(0.1); } /* Simulate blink */
-}
-
-@keyframes armMove {
-    0%, 100% { transform: rotate(10deg); }
-    50% { transform: rotate(-5deg); }
-}
-
-/* Coffee Cup (Optional) */
-.coffee-cup {
-    position: absolute;
-    bottom: 55px; /* Same level as bot */
-    right: 15%; /* Position to the right */
-    width: 60px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 3;
-    animation: cupBob 5s ease-in-out infinite alternate;
-}
-
-.cup-body {
-    width: 60px;
-    height: 60px;
-    background-color: var(--cup-cream);
-    border-radius: 0 0 25px 25px; /* Rounded bottom */
-    border: 3px solid var(--coffee-brown);
-    border-top: none;
-    position: relative;
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.cup-body::before { /* Coffee inside the cup */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background-color: var(--coffee-brown);
-    border-radius: 0 0 10px 10px;
-}
-
-.handle {
-    width: 25px;
-    height: 30px;
-    border: 5px solid var(--cup-cream);
-    border-left: none;
-    border-radius: 0 50% 50% 0;
-    position: absolute;
-    right: -10px;
-    top: 15px;
-    transform: rotate(20deg);
-}
-
-.steam-container {
-    position: absolute;
-    top: -20px; /* Above the cup */
-    width: 100%;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-}
-
-.steam {
-    width: 8px;
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    position: absolute;
-    opacity: 0;
-    animation: steamRise 4s infinite ease-out;
-}
-
-.steam.s1 { animation-delay: 0s; left: 10px; }
-.steam.s2 { animation-delay: 1.3s; left: -10px; }
-.steam.s3 { animation-delay: 2.6s; } /* Centered */
-
-/* Coffee Cup Animations */
-@keyframes cupBob {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-3px) rotate(1deg); }
-}
-
-@keyframes steamRise {
-    0% { transform: translateY(0) scale(0.5); opacity: 0; }
-    30% { opacity: 1; }
-    100% { transform: translateY(-30px) scale(1.2); opacity: 0; }
-}
 
 
 /* Mobile Responsiveness */
-@media (max-width: 700px) {
+@media screen and (max-width: 768px) {
+    /* ... (your existing styles for this media query) ... */
+
     .hero-content {
-        width: auto;
-        padding: 20px; /* Adjust padding */
+        /* Ensure content within hero-content also respects boundaries */
+        max-width: 90%; /* Allow it to take up more of the screen width */
+        padding: 20px; /* Adjust padding for mobile view */
+        box-sizing: border-box; /* Include padding in the width calculation */
     }
 
-    h1 {
-        font-size: 2.8rem; /* Adjusted size */
+    .hero-content p {
+        /* This is crucial for text wrapping inside hero-content */
+        word-wrap: break-word; /* Breaks words to prevent overflow */
+        overflow-wrap: break-word; /* Modern equivalent */
+        white-space: normal; /* Ensures text wraps, overriding any potential no-wrap */
     }
 
-    h2 {
-        font-size: 1.8rem;
+    /* ... (rest of your existing styles for this media query) ... */
+}
+
+@media (max-width: 100%) {
+    /* ... (your existing styles for this media query) ... */
+
+    .hero-content {
+        /* Further adjustments for smaller screens */
+        max-width: 95%; /* Even more width on smaller screens */
+        padding: 15px; /* Smaller padding */
     }
 
-    h3 {
-        font-size: 1.4rem;
+    .hero-content p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
 
-    p {
-        font-size: 0.95rem; /* Slightly smaller for mobile */
-    }
-
+    /* ... (rest of your existing styles for this media query) ... */
+}
     #hamburger-menu {
         font-size: 25px;
         padding: 8px 12px;
