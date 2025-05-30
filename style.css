@@ -1,4 +1,3 @@
-
 /* General Styles */
 :root {
     /* Define a color palette for consistency */
@@ -11,15 +10,6 @@
     --glass-light: rgba(255, 255, 255, 0.15); /* Slightly more opaque for less blur */
     --glass-border: rgba(255, 255, 255, 0.3);
     --glass-shadow: rgba(0, 0, 0, 0.2);
-
-    /* New: Animation Specific Colors/Sizes */
-    --bot-color-primary: #4CAF50; /* A friendly green for the bot */
-    --bot-color-secondary: #388E3C;
-    --chart-green: #28a745;
-    --chart-red: #dc3545;
-    --chart-border: #6c757d;
-    --coffee-brown: #6D4C41;
-    --cup-cream: #FFFDE7;
 }
 
 body {
@@ -69,8 +59,7 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    /* Ensure hero section allows for content above the animation */
-    flex-direction: column; /* Allows content and animation to stack */
+    flex-direction: column; /* Allows content to stack */
 }
 
 .hero-content {
@@ -82,7 +71,7 @@ header {
     max-width: 800px;
     margin: auto;
     box-shadow: 0 8px 20px var(--glass-shadow); /* More pronounced shadow */
-    margin-bottom: 50px; /* Space between hero text and animation */
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -108,17 +97,15 @@ h3 {
 }
 
 .hero-content p {
-  color: lightblue; /* This is a dark grey, offering good contrast */
- /* animation: popIn 1s ease-out forwards;*/
+    color: lightblue; /* This is a dark grey, offering good contrast */
 }
 
 /* Main Content Wrapper */
 #main-content {
-    /* This new ID wraps all your main page content */
     flex-grow: 1; /* Allows it to take up available space */
-    position: relative; /* Needed for z-index with overlay */
-    z-index: 1; /* Ensure it's below the overlay */
-    transition: opacity 0.3s ease; /* Smooth transition for dimming */
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 #main-content.dim {
@@ -126,13 +113,13 @@ h3 {
     pointer-events: none; /* Disables interaction when dimmed */
 }
 
-/* Content Area - Renamed from #main-content to .wrapper for clarity */
+/* Content Area */
 .wrapper {
     max-width: 1200px;
     margin: 30px auto;
     padding: 30px; /* More padding */
     line-height: 1.8; /* Increased line height for readability */
-    text-align: left; /* Typically more professional than center */
+    text-align: left;
     background: linear-gradient(to bottom right, #f0f8ff, #ffffff); /* Softer light blue gradient */
     border-radius: 15px; /* Softer corners */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -175,7 +162,7 @@ p {
     box-shadow: 0 4px 10px var(--glass-shadow);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, left 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 #hamburger-menu:hover {
@@ -190,7 +177,7 @@ p {
     left: -300px;
     width: 300px;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)); /* Slightly more prominent glass effect */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-right: 1px solid var(--glass-border);
@@ -199,25 +186,12 @@ p {
     z-index: 9999;
     padding-top: 80px;
     box-sizing: border-box;
-    overflow-y: auto; /* New: Allows scrolling if menu content is too long */
+    overflow-y: auto;
 }
 
 .side-panel.show {
     left: 0;
 }
-
-/*
-  Removed this problematic block as you noted.
-  The hamburger menu's fixed position and z-index should keep it correctly
-  positioned and visible regardless of the side panel's state.
-*/
-/*
-.side-panel.show + #hamburger-menu {
-    left: 260px;
-    top: 20px;
-    z-index: 10000;
-}
-*/
 
 .side-panel ul {
     list-style: none;
@@ -227,7 +201,7 @@ p {
 
 .side-panel ul li {
     padding: 12px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for contrast */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .side-panel ul li:last-child {
@@ -235,7 +209,7 @@ p {
 }
 
 .side-panel ul li a {
-    color: var(--dark-bg-color); /* Crucial: Changed link color to dark for readability */
+    color: var(--dark-bg-color);
     text-decoration: none;
     font-size: 1.1em;
     display: flex;
@@ -248,10 +222,6 @@ p {
     color: var(--highlight-color);
 }
 
-/* Crucial: All dropdown-specific CSS blocks are removed as per your instruction.
-  If you decide to reintroduce dropdowns, you'll need to add these back.
-*/
-
 /* Overlay */
 .overlay {
     position: fixed;
@@ -259,7 +229,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 9998;
 }
@@ -267,10 +237,10 @@ p {
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px; /* More padding */
+    padding: 15px;
     background-color: var(--dark-bg-color);
     color: white;
-    margin-top: 30px; /* More space above footer */
+    margin-top: 30px;
     font-size: 0.9em;
 }
 
@@ -283,8 +253,8 @@ footer span {
 .accordion-button {
     background-color: var(--dark-bg-color);
     color: white;
-    padding: 10px 15px; /* More padding */
-    font-size: 1.15rem; /* Slightly larger */
+    padding: 10px 15px;
+    font-size: 1.15rem;
     text-align: left;
     border: none;
     width: 100%;
@@ -292,44 +262,42 @@ footer span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 8px; /* Softer corners */
+    border-radius: 8px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 8px; /* More spacing */
+    margin-bottom: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .accordion-button:hover {
-    background-color: #4a4a4a; /* Slightly lighter hover */
+    background-color: #4a4a4a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Arrow Styles for main accordions */
 .accordion-button .arrow {
     transition: transform 0.3s ease;
-    font-size: 1.6rem; /* Slightly larger */
+    font-size: 1.6rem;
     transform: rotate(0deg);
 }
 
 /* Accordion Content for main accordions */
 .accordion-content {
-    padding: 0 20px; /* **Adjusted padding:** Now includes horizontal padding, but keep top/bottom 0 */
+    padding: 0 20px;
     background-color: var(--dark-bg-color);
     color: #fff;
     max-height: 0;
     overflow: hidden;
-    /* **Crucial:** Changed to 0.3s transition for max-height and padding.
-       This will make the accordion animation smooth. */
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     border-radius: 4px;
-    margin-bottom: 0; /* REMOVED SPACE */
-    border: none; /* REMOVED BLACK LINE */
+    margin-bottom: 0;
+    border: none;
 }
 
 /* When the accordion content is 'active' or 'open' */
 .accordion-content.active {
-    max-height: 200px; /* **Adjust as needed:** Set a value large enough to contain your content */
-    padding-top: 15px; /* Add top padding when open */
-    padding-bottom: 15px; /* Add bottom padding when open */
+    max-height: 200px; /* Adjust as needed */
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* Rotate arrow when accordion is active */
@@ -338,92 +306,72 @@ footer span {
 }
 
 .accordion-content p,
-.accordion-content a { /* Added a to ensure consistent styling for links inside accordion */
+.accordion-content a {
     color: white;
-    padding: 5px 0; /* Reduced padding for content within p */
+    padding: 5px 0;
     margin: 0;
     font-size: 1em;
 }
 
 /* Images in Content (Professional Sizing) */
 img {
-    max-width: auto;
-    height: auto;
+    max-width: 100%; /* Ensure images don't overflow */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    margin: 20px auto; /* More margin around images */
-    border-radius: 8px; /* Slightly rounded corners for images */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     object-fit: contain; /* Ensures entire image is visible, scales down if needed */
 }
 
-@keyframes fadeInScale {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-/* Floor */
-.floor {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Height of the floor */
-    background: linear-gradient(to top, #333, #444);
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    z-index: 1;
-}
-
-
-
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    /* ... (your existing styles for this media query) ... */
+    .hero-section {
+        padding: 10px; /* Reduce hero padding on smaller screens */
+    }
 
     .hero-content {
-        /* Ensure content within hero-content also respects boundaries */
-        max-width: 90%; /* Allow it to take up more of the screen width */
+        max-width: 95%; /* Allow hero content to take up more width */
         padding: 20px; /* Adjust padding for mobile view */
         box-sizing: border-box; /* Include padding in the width calculation */
     }
 
     .hero-content p {
-        /* This is crucial for text wrapping inside hero-content */
         word-wrap: break-word; /* Breaks words to prevent overflow */
         overflow-wrap: break-word; /* Modern equivalent */
         white-space: normal; /* Ensures text wraps, overriding any potential no-wrap */
     }
 
-    /* ... (rest of your existing styles for this media query) ... */
-}
-
-@media (max-width: 100%) {
-    /* ... (your existing styles for this media query) ... */
-
-    .hero-content {
-        /* Further adjustments for smaller screens */
-        max-width: 95%; /* Even more width on smaller screens */
-        padding: 15px; /* Smaller padding */
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller for mobile */
     }
 
-    .hero-content p {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal;
+    h2 {
+        font-size: 1.8rem;
     }
 
-    /* ... (rest of your existing styles for this media query) ... */
-}
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem; /* Ensure paragraph text is readable */
+    }
+
+    .wrapper {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
     #hamburger-menu {
         font-size: 25px;
         padding: 8px 12px;
-        top: 15px; /* Adjust position */
+        top: 15px;
         left: 15px;
     }
 
     .side-panel {
-        width: 250px; /* Adjust for smaller screens */
+        width: 250px;
         left: -250px;
         padding-top: 60px;
     }
@@ -436,22 +384,20 @@ img {
         padding: 12px 15px;
     }
 
-    /* Responsive Design for Accordion */
     .accordion-button {
         font-size: 1rem;
         padding: 10px 18px;
     }
 
     .accordion-content {
-        /* Removed padding for consistency with desktop active state logic */
         font-size: 1rem;
     }
 
     .accordion-content.active {
-        padding-top: 12px; /* Adjusted padding for mobile open state */
+        padding-top: 12px;
         padding-bottom: 12px;
-        padding-left: 18px; /* Maintain horizontal padding */
-        padding-right: 18px; /* Maintain horizontal padding */
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     .accordion-content p {
@@ -463,54 +409,36 @@ img {
     }
 
     img {
-        margin: 15px auto; /* Reduced margin for mobile */
-    }
-
-    /* Trading Bot Animation Responsive */
-    .trading-bot-animation-section {
-        height: 300px; /* Smaller height for mobile */
-        max-width: 90%;
-        margin: 30px auto;
-    }
-    .bot-character {
-        left: 10%; /* Adjust position */
-        transform: scale(0.8); /* Scale down bot */
-        bottom: 50px;
-    }
-    .candlestick-chart {
-        transform: translateX(-50%) scale(0.8); /* Scale down chart */
-        bottom: 45px;
-    }
-    .coffee-cup {
-        right: 10%; /* Adjust position */
-        transform: scale(0.8); /* Scale down cup */
-        bottom: 50px;
-    }
-    .computer-screen {
-        font-size: 0.5em; /* Smaller text */
+        margin: 15px auto;
     }
 }
 
 @media (max-width: 480px) {
     .hero-content {
-        width: 95%;
+        width: 98%; /* Even more width on smallest screens */
         padding: 15px;
     }
 
+    .hero-content p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
     h1 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* Further reduced for very small screens */
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.95rem; /* Maintain good readability */
     }
 
     .side-panel {
@@ -526,81 +454,21 @@ img {
     }
 
     .hero-section {
-        min-height: 60vh;
+        min-height: 50vh; /* Make hero section smaller on tiny screens */
     }
 
     .accordion-button {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         padding: 8px 15px;
     }
 
     .accordion-content {
         font-size: 0.9rem;
-        /* Removed padding for consistency with desktop active state logic */
     }
     .accordion-content.active {
-        padding-top: 10px; /* Adjusted padding for smallest mobile open state */
+        padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 15px; /* Maintain horizontal padding */
-        padding-right: 15px; /* Maintain horizontal padding */
-    }
-
-    /* Trading Bot Animation Responsive */
-    .trading-bot-animation-section {
-        height: 250px; /* Even smaller height for tiny screens */
-        max-width: 95%;
-        margin: 20px auto;
-    }
-    .bot-character, .coffee-cup {
-        transform: scale(0.7); /* Scale down even further */
-    }
-    .candlestick-chart {
-        transform: translateX(-50%) scale(0.7);
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
-.hero-section {
-  position: relative; /* Make the hero section a positioning context */
-  overflow: hidden; /* Hide any overflowing content */
-}
-
-.trading-bot-animation-section {
-  position: absolute; /* Position the animation absolutely within the hero section */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Ensure it's above the background image */
-}
-
-/* Add any other existing styles for your animation here */
-
-/* Optional: Add a transition for a smoother effect */
-.trading-bot-animation-section {
-  transition: opacity 0.5s ease;
-}
-
-/* Hide the animation initially */
-.trading-bot-animation-section {
-  opacity: 0;
-}
-
-/* Show the animation when the user is at the top of the page */
-body.at-top .trading-bot-animation-section {
-  opacity: 1;
-}
-
-/* JavaScript to toggle the 'at-top' class on the body */
-window.addEventListener('scroll', () => {
-  if (window.scrollY === 0) {
-    document.body.classList.add('at-top');
-  } else {
-    document.body.classList.remove('at-top');
-  }
-});
-
-/* Add the 'at-top' class initially */
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.scrollY === 0) {
-    document.body.classList.add('at-top');
-  }
-});
