@@ -540,3 +540,34 @@ html.dark #dark-theme-toggle {
 html.dark #dark-theme-toggle:hover {
     background-color: rgba(0, 0, 0, 0.2); /* Slightly opaque black on hover in dark mode */
 }
+/* --- Professional Image Consistency --- */
+
+/* Target images specifically within the main content/project sections */
+.project img,
+.section img {
+    /* Set a consistent, fixed height for all project/section images */
+    /* You may need to adjust this '350px' value to match the exact size of your first AI assistant image. */
+    height: 350px; 
+    
+    /* Ensure the image covers the fixed height/width container without distortion, 
+       cropping any overflow from the top/bottom or sides. */
+    object-fit: cover; 
+    
+    /* Ensure the max-width rule from the general 'img' style is active */
+    max-width: 100%; 
+    
+    /* Keep the other styles for appearance */
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--image-shadow);
+    transition: box-shadow 0.3s ease, height 0.3s ease;
+}
+
+/* Fix for the small partner image (e.g., Exness logo) inside the Trading Bot section */
+.project .container .image-container img {
+    /* Reset height and object-fit for smaller, logo-style images */
+    height: auto; 
+    object-fit: contain; /* Keep the original aspect ratio */
+    max-width: 150px; /* Adjust max width for logo */
+}
