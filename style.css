@@ -540,3 +540,44 @@ html.dark #dark-theme-toggle {
 html.dark #dark-theme-toggle:hover {
     background-color: rgba(0, 0, 0, 0.2); /* Slightly opaque black on hover in dark mode */
 }
+
+/* --- OVERRIDE FOR ALL MAIN CONTENT IMAGES (Including Exness) --- */
+
+/* Targets ALL <img> tags within a project or content section, 
+   except for the small, non-project related logos in the side-panel and accordion. */
+.project img,
+.section img {
+    /* SET FIXED SIZE FOR PROFESSIONAL LOOK */
+    height: 350px; /* Use your desired uniform height */
+    object-fit: cover; /* CROPS the image to fill the fixed height/width, ensuring consistency */
+    
+    /* Re-apply and refine general appearance rules */
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--image-shadow);
+    transition: box-shadow 0.3s ease, height 0.3s ease;
+}
+
+/* --- EXCLUSION RULES TO PROTECT THE WHATSAPP LOGO/MENU --- */
+
+/* 1. Protects the small image inside the Side Panel navigation menu */
+.side-panel ul li img {
+    height: 25px !important; /* Forces the small height */
+    width: 25px !important;  /* Forces the small width */
+    object-fit: contain !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    display: inline !important;
+}
+
+/* 2. Protects the small image inside the Contact Accordion menu */
+.accordion-content a img {
+    height: 25px !important; /* Forces the small height */
+    width: 25px !important;  /* Forces the small width */
+    object-fit: contain !important;
+    box-shadow: none !important;
+    margin: 0 5px 0 0 !important;
+    display: inline-block !important;
+}
