@@ -39,22 +39,24 @@
 
     <nav class="side-panel">
         <button id="dark-theme-toggle" class="p-2 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white" style="margin: 10px auto; display: block; font-size: 16px; min-width: 120px; text-align: center;">
-            Theme: <span aria-hidden="true">☀️</span> </button>
+            Theme: <span aria-hidden="true">🌔</span> </button>
 
         <ul>
             <li><a href="#hero-section">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Projects </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#ai-assistant-project">AI Assistant</a></li>
-                    <li><a href="#trading-bot-project">Trading Bot</a></li>
-                    <li><a href="#scientific-research-project">Scientific Research</a></li>
-                    <li><a href="#explorations-section">Explorations</a></li>
-                    <li><a href="#video-exploration-section">Video Exploration (Algae)</a></li>
-                    <li><a href="#heterogeneous-mixture-section">Heterogeneous Mixtures</a></li>
-                </ul>
-            </li>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle">Projects </a>
+    <ul class="dropdown-menu">
+        <li><a href="#ai-assistant-project">AI Assistant</a></li>
+        <li><a href="#trading-bot-project">Trading Bot</a></li>
+        <li><a href="#scientific-research-project">Scientific Research</a></li>
+        <li><a href="#joules-law-project">Joule's Law Lab</a></li> 
+        <li><a href="#explorations-section">Explorations</a></li>
+        <li><a href="#video-exploration-section">Video Exploration (Algae)</a></li>
+        <li><a href="#tritation-section">Chemical Separation</a></li>
+        <li><a href="#description">Marine Sponge</a></li>
+    </ul>
+</li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">Contact</a>
                 <ul class="dropdown-menu contact-dropdown-menu">
@@ -190,7 +192,23 @@
                         Investigating the microscopic world of algae not only enhances an appreciation for the complexity of nature but also sparks curiosity about other ancient biological connections that remain undiscovered. The algae studied at Port Elizabeth may provide valuable answers to long-standing questions about the evolution of plant life, offering new perspectives on Earth's natural history.
                     </p>
                 </section>
+<div class="project full-width" id="joules-law-project">
+    <h2>Demonstrating Physical Science: Joule's Law</h2>
+    
+    <video width="100%" height="auto" controls>
+        <source src="joule's law.mp4" type="video/mp4">
+        <source src="joule's law.webm" type="video/webm">
+        <source src="joule's law.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
 
+    <div class="project-content">
+        <h3>Applying the Fundamentals of Physics </h3>
+        <p>
+            Just wrapped up a successful physics lab experiment to directly verify **Joule's Law of Heating**. This foundational principle proves that electrical resistance converts current into thermal energy ($H=I^2Rt$). We used a specialized setup with a power logger, temperature sensor, and stirring apparatus to precisely measure how electrical work heats water. The resulting data confirmed the theory, showing a clear, proportional relationship between the electrical energy supplied and the temperature rise. It's rewarding to see abstract formulas come to life in the lab!
+        </p>
+    </div>
+</div>
         
     <h2>Check this cool Video of Marine Sponge at Kings Beach Gqeberha’s Coast</h2>
     <video width="100%" height="500px" controls>
@@ -217,8 +235,8 @@
         <p>
             This discovery is more than just a dried sponge, it’s a window into deep time, and a living testament to the quiet brilliance of nature’s oldest engineers. As simple as they may seem, marine sponges are foundational to understanding both our oceans and the roots of animal life on Earth.
         </p>
-    </section>
-
+</section> </section> 
+            <section id="tritation-section" class="section">
   <h2>Check this cool Video of Tritation, basic seperation of chemicals.</h2>
             <video width="100%" height="500px" controls>
                 <source src="Extraction.mp4" type="video/mp4">
@@ -305,7 +323,7 @@
     <script>
         const toggleButton = document.getElementById('dark-theme-toggle'); // Changed ID here
         const htmlElement = document.documentElement;
-        const sunIcon = '☀️';
+        const sunIcon = '🌔';
         const moonIcon = '🌙';
 
         function applyTheme(theme) {
@@ -333,3 +351,4 @@
     <script src="//code.tidio.co/rlpq6ytnodbnnlciljzihgdimacc47cj.js" async></script>
 </body>
 </html>
+
