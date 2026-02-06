@@ -67,3 +67,21 @@ if (navToggle && mainNav) {
     mainNav.classList.toggle("open");
   });
 }
+// Reveal on scroll (mobile-safe)
+const reveals = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach((el) => io.observe(el));
+} else {
+  // fallback for old browsers
+  reveals.forEach((el) => el.classList.add("in-view"));
+}
