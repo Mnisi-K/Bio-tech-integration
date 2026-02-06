@@ -1426,8 +1426,7 @@ a.card h3 {
   grid-template-columns: 1fr 1fr !important;
   grid-template-areas:
     "brand brand"
-    "explore contact"
-    "social social" !important;
+    "explore contact social social" !important;
     gap: 14px 16px !important;
     margin-bottom: 12px !important;
     text-align: left !important;
