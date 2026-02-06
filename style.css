@@ -1422,12 +1422,12 @@ a.card h3 {
      contact full width
   */
   .footer-grid{
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-areas:
-      "brand brand"
-      "explore social"
-      "contact contact" !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-areas:
+    "brand brand"
+    "explore contact"
+    "social social" !important;
     gap: 14px 16px !important;
     margin-bottom: 12px !important;
     text-align: left !important;
@@ -1448,3 +1448,38 @@ a.card h3 {
     align-items: flex-start !important;
   }
 }
+/* ================= REVEAL ANIMATIONS: MOBILE ENABLE ================= */
+
+/* Use ONE class system: in-view (but also support is-visible just in case) */
+.reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.in-view,
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile: still animate, just smaller distance + faster */
+@media (max-width: 900px){
+  .reveal{
+    opacity: 0 !important;
+    transform: translateY(10px) !important;
+    transition: opacity 0.35s ease, transform 0.35s ease !important;
+  }
+  .reveal.in-view,
+  .reveal.is-visible{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition: none !important; transform: none !important; opacity: 1 !important; }
+}
+_toggle = document.getElementById("nav-toggle");
