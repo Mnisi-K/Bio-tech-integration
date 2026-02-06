@@ -59,3 +59,11 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 })();
+const navToggle = document.getElementById("nav-toggle");
+const mainNav = document.getElementById("main-nav");
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+}
