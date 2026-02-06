@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <title>Media · Eminent Prestige</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Myicon_64x64.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="Myicon_64x64.png" alt="EP Logo" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-name">Eminent Prestige</span>
+                    <span class="brand-tagline">Science · Systems · Intelligent Tools</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="biology.html">Biology Projects</a></li>
+                    <li><a href="ai-tools.html">Trading Systems</a></li>
+                    <li><a href="media.html" class="active">Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-toggle" id="theme-toggle" type="button"> Dark</button>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Media Gallery</h2>
+                <p>Videos + images with short explanations (same vibe as your old site).</p>
+            </div>
+
+            <div class="media-grid">
+
+                <!-- VIDEO: Sponge -->
+                <article class="card media-card reveal" id="sponge">
+                    <div class="card-media video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="Sponge.mp4" type="video/mp4">
+                            Your browser does not support video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h3>Sponge Observation</h3>
+                        <p>Real-time look at sponge structure and texture for clearer understanding.</p>
+                    </div>
+                </article>
+
+                <!-- VIDEO: Extraction -->
+                <article class="card media-card reveal" id="extraction">
+                    <div class="card-media video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="Extraction.mp4" type="video/mp4">
+                            Your browser does not support video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h3>Extraction Process</h3>
+                        <p>Demonstration of extraction during a biological chemistry practical.</p>
+                    </div>
+                </article>
+
+                <!-- VIDEO: Joule's Law -->
+                <article class="card media-card reveal" id="joule">
+                    <div class="card-media video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="joule's law.mp4" type="video/mp4">
+                            Your browser does not support video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h3>Joule's Law</h3>
+                        <p>A physics demo showing the relationship between current, resistance and heat.</p>
+                    </div>
+                </article>
+
+                <!-- IMAGE placeholders: replace with your real photos -->
+                <article class="card media-card reveal">
+                    <div class="card-media">
+                        <img src="images/fieldwork-01.jpg" alt="Fieldwork photo" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Fieldwork Moment</h3>
+                        <p>Replace <code>images/fieldwork-01.jpg</code> with your own image.</p>
+                    </div>
+                </article>
+
+                <article class="card media-card reveal">
+                    <div class="card-media">
+                        <img src="images/lab-01.jpg" alt="Lab practical photo" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Lab Practical</h3>
+                        <p>Add a short description under each image (what it shows + why it matters).</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer site-footer--black">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand">Eminent Prestige</p>
+        <p class="footer-note">
+          Biotechnology and intelligent systems built with precision and discipline.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Explore</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="biology.html">Biology Projects</a>
+          <a href="ai-tools.html">Trading Systems</a>
+          <a href="media.html">Discovery Hub</a>
+          <a href="contact.html">Contact</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Social</p>
+        <div class="footer-links">
+          <a href="https://instagram.com/eminent_prestige" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/profile.php?id=YOUR_ID" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/27665922166" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://youtube.com/channel/UCHgC27A0Ft5Uj2L-FM2sJ1w" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Contact</p>
+        <div class="footer-links">
+          <a href="contact.html">Send a message</a>
+          <a href="mailto:Eminent01Prestige@gmail.com">Eminent01Prestige@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Eminent Prestige · Mnisi Kholofelo</p>
+    </div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="contact.html" aria-label="Chat">💬</a>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
