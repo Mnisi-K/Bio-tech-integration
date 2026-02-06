@@ -1342,3 +1342,156 @@ a.card h3 {
     border-radius: 10px !important;
   }
 }
+/* ===== Reveal animation: force consistent class ===== */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.in-view { opacity: 1 !important; transform: translateY(0) !important; }
+/* ===== Mobile fallback: never hide content ===== */
+@media (max-width: 900px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* ================== FINAL MOBILE FIXES (PASTE AT BOTTOM) ================== */
+
+/* ----- 1. Fix Navigation Issues on Mobile (menu button + reveal) ----- */
+
+/* Make header sticky and above content */
+.site-header{
+  position: sticky !important;
+  top: 0;
+  z-index: 999999 !important;
+}
+
+/* Ensure buttons are always clickable */
+.nav-toggle, .theme-toggle{
+  position: relative !important;
+  z-index: 9999999 !important;
+}
+
+/* Default desktop-style nav remains visible */
+.main-nav{
+  position: relative;
+  z-index: 10000;
+}
+
+/* ----- MOBILE ----- */
+@media (max-width: 900px){
+
+  /* Show burger button */
+  .nav-toggle{
+    display: inline-flex !important;
+  }
+
+  /* Hide links on default (for mobile) */
+  .main-nav ul{
+    display: none !important;
+  }
+
+  /* Dropdown container */
+  .main-nav{
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid rgba(148,163,184,0.35) !important;
+    padding: 10px 14px !important;
+    transform: translateY(-8px) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.18s ease, transform 0.18s ease !important;
+  }
+
+  /* OPEN STATE (when JS toggles) */
+  .main-nav.open, .site-header.nav-open .main-nav{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+
+  /* When nav is opened (JS adds .open), display links */
+  .main-nav.open ul, .site-header.nav-open .main-nav ul{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 6px 0 !important;
+    margin: 0 !important;
+  }
+
+  .main-nav a{
+    display: block !important;
+    padding: 10px 8px !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* ----- 2. Mobile Footer Fix (Reduce space, padding) ----- */
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding: 1.5rem 0 !important;
+    font-size: 0.85rem !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .footer-col {
+    text-align: center !important;
+  }
+
+  .footer-title {
+    font-size: 1rem !important;
+  }
+
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: center !important;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem !important;
+    margin-top: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+}
+
+/* ----- 3. Hero Image Adjustment on Mobile ----- */
+@media (max-width: 900px) {
+  .hero-bg-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  .hero {
+    padding: 3rem 0 3.5rem !important;
+    min-height: auto !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-text {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* ----- 4. Reveal Animation on Mobile ----- */
+
+@media (max-width: 900px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
