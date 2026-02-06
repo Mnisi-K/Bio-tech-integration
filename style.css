@@ -1404,3 +1404,47 @@ a.card h3 {
     gap: 6px !important;
   }
 }
+/* ================= MOBILE FOOTER LAYOUT FIX ================= */
+@media (max-width: 700px) {
+
+  .site-footer--black{
+    padding: 26px 0 14px !important;
+  }
+
+  /* Make footer compact */
+  .footer-brand { font-size: 16px !important; margin: 0 0 6px !important; }
+  .footer-title { font-size: 14px !important; margin: 0 0 6px !important; }
+  .footer-links { gap: 6px !important; }
+
+  /* 3-row layout:
+     brand full width
+     explore + social side-by-side
+     contact full width
+  */
+  .footer-grid{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-areas:
+      "brand brand"
+      "explore social"
+      "contact contact" !important;
+    gap: 14px 16px !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+  }
+
+  /* assign areas by position (your HTML order is: brand, explore, social, contact) */
+  .footer-grid .footer-col:nth-child(1){ grid-area: brand; }
+  .footer-grid .footer-col:nth-child(2){ grid-area: explore; }
+  .footer-grid .footer-col:nth-child(3){ grid-area: social; }
+  .footer-grid .footer-col:nth-child(4){ grid-area: contact; }
+
+  /* Bottom line smaller */
+  .footer-bottom{
+    padding-top: 10px !important;
+    font-size: 12px !important;
+    gap: 6px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
