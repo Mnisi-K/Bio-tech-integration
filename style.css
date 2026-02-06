@@ -1186,3 +1186,90 @@ a.card h3 {
   color: #fff;
   border-bottom-color: #fff;
 }
+/* ---------- Mobile Nav Fix ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Ensure buttons sit above overlays */
+.nav-toggle,
+.theme-toggle {
+  position: relative;
+  z-index: 10001;
+}
+
+/* Default: desktop nav visible */
+.main-nav {
+  position: relative;
+  z-index: 10000;
+}
+
+/* Mobile layout */
+@media (max-width: 820px) {
+  /* Hide desktop-style nav list until opened */
+  .main-nav ul {
+    display: none;
+  }
+
+  /* Show burger button */
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* When nav is opened (JS adds .open), show it */
+  .main-nav.open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 16px;
+    top: 70px; /* below header */
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 14px;
+    min-width: 220px;
+    z-index: 10000;
+  }
+
+  .main-nav.open a {
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+
+  /* Prevent hero overlay from blocking clicks */
+  .hero-bg-wrapper,
+  .hero-overlay,
+  .hero-bg-img {
+    pointer-events: none;
+  }
+
+  /* Reduce hero spacing on mobile */
+  .hero {
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .hero-inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 820px) {
+  .section {
+    padding: 40px 0;
+  }
+  .section-header p {
+    max-width: 60ch;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
