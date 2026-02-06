@@ -1352,3 +1352,55 @@ a.card h3 {
     transform: none !important;
   }
 }
+/* ================== MOBILE EMERGENCY FIX (PASTE LAST) ================== */
+
+/* 1) STOP reveal from hiding content on mobile */
+@media (max-width: 900px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Also fix mismatch classes: support BOTH names */
+.reveal.in-view,
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* 2) FOOTER TOO BIG ON MOBILE: tighten spacing */
+@media (max-width: 900px) {
+  .site-footer--black {
+    padding: 22px 0 12px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .footer-brand {
+    font-size: 16px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .footer-title {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .footer-links {
+    gap: 6px !important;
+  }
+
+  .footer-bottom {
+    padding-top: 10px !important;
+    font-size: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+}
