@@ -85,3 +85,27 @@ if ("IntersectionObserver" in window) {
   // fallback for old browsers
   reveals.forEach((el) => el.classList.add("in-view"));
 }
+// ----- Reveal on scroll (works on mobile) -----
+const revealEls = document.querySelectorAll(".reveal");
+
+if (revealEls.length) {
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view"); // standard
+          entry.target.classList.add("is-visible"); // also support your other CSS
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    // old browser fallback
+    revealEls.forEach((el) => {
+      el.classList.add("in-view");
+      el.classList.add("is-visible");
+    });
+  }
+}
