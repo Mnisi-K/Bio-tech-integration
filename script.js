@@ -132,3 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   els.forEach(el => io.observe(el));
 });
+const navToggle = document.getElementById("nav-toggle");
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    document.getElementById("main-nav")?.classList.toggle("open");
+  });
+}
