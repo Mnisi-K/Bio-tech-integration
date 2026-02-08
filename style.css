@@ -1471,3 +1471,25 @@ a.card h3 {
     transition: none !important;
   }
 }
+/* ===== No hamburger: keep desktop nav on mobile ===== */
+@media (max-width: 900px) {
+  .nav-toggle { 
+    display: none !important;
+  }
+
+  /* Keep nav visible */
+  .main-nav {
+    display: block !important;
+  }
+
+  .main-nav ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    list-style: none;
+  }
+}
