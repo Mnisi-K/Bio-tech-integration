@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <!-- NAV -->
+      <!-- NAV (always visible, no hamburger) -->
       <nav class="main-nav" id="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -32,18 +32,10 @@
           <li><a href="biology.html">Biology Projects</a></li>
 
           <li><a href="contact.html">Contact</a></li>
-
-          <!-- Theme toggle moved into menu -->
-          <li class="nav-theme-item">
-            <button class="theme-toggle theme-toggle--inmenu" id="theme-toggle" type="button">🌙 Dark</button>
-          </li>
         </ul>
       </nav>
 
-      <!-- Hamburger only (no chat button, no theme button up here) -->
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- no nav-toggle here -->
     </div>
   </header>
 
@@ -60,7 +52,6 @@
         <p class="hero-subtitle">Biotechnology and intelligent systems.</p>
 
         <div class="hero-actions">
-          <!-- Trading first -->
           <a href="ai-tools.html" class="btn primary">Trading Systems</a>
           <a href="biology.html" class="btn ghost">Biology Projects</a>
         </div>
@@ -111,7 +102,7 @@
     </div>
   </section>
 
-  <!-- Website help section (tightened heading) -->
+  <!-- Website help section -->
   <section class="section">
     <div class="container">
       <div class="section-header reveal">
@@ -148,7 +139,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (updated copyright line) -->
+  <!-- FOOTER -->
   <footer class="site-footer site-footer--black">
     <div class="container footer-inner">
       <div class="footer-grid">
@@ -195,10 +186,14 @@
     </div>
   </footer>
 
+  <!-- FLOATING THEME TOGGLE (replaces chat bubble) -->
+  <button class="theme-fab" id="theme-toggle" type="button" aria-label="Toggle theme">🎨</button>
+
   <script src="script.js"></script>
 
   <!-- PAGE-SAFE CSS (ONLY FOR INDEX) -->
   <style>
+    /* Cards */
     .card { overflow: hidden; }
     .card-media {
       height: 170px;
@@ -215,12 +210,42 @@
     }
     .clickable-card:hover .card-media img { transform: scale(1.08); }
 
-    /* Put theme toggle inside menu nicely */
-    .nav-theme-item { padding-top: 8px; }
-    .theme-toggle--inmenu {
-      width: 100%;
-      text-align: left;
+    /* Force nav visible on mobile (no hamburger layout) */
+    @media (max-width: 900px) {
+      .main-nav { display: block !important; }
+      .main-nav ul {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+      }
+      .header-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
+
+    /* Floating theme button */
+    .theme-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      z-index: 9999;
+    }
+    .theme-fab:hover { background: #000; }
   </style>
 
 </body>
