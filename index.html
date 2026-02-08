@@ -21,18 +21,26 @@
         </div>
       </div>
 
+      <!-- NAV -->
       <nav class="main-nav" id="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="biology.html">Biology Projects</a></li>
+
+          <!-- Trading before Biology -->
           <li><a href="ai-tools.html">Trading Systems</a></li>
+          <li><a href="biology.html">Biology Projects</a></li>
+
           <li><a href="contact.html">Contact</a></li>
+
+          <!-- Theme toggle moved into menu -->
+          <li class="nav-theme-item">
+            <button class="theme-toggle theme-toggle--inmenu" id="theme-toggle" type="button">🌙 Dark</button>
+          </li>
         </ul>
       </nav>
 
-      <button class="theme-toggle" id="theme-toggle" type="button">🌙 Dark</button>
-
+      <!-- Hamburger only (no chat button, no theme button up here) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -49,11 +57,10 @@
       <div class="hero-text reveal">
         <p class="hero-kicker">Eminent Prestige</p>
         <h1>Precision in Trading and Science.</h1>
-        <p class="hero-subtitle">
-          Biotechnology and intelligent systems.
-        </p>
+        <p class="hero-subtitle">Biotechnology and intelligent systems.</p>
 
         <div class="hero-actions">
+          <!-- Trading first -->
           <a href="ai-tools.html" class="btn primary">Trading Systems</a>
           <a href="biology.html" class="btn ghost">Biology Projects</a>
         </div>
@@ -68,18 +75,8 @@
         <p>Select a sector.</p>
       </div>
 
-      <!-- CARDS WITH IMAGES -->
       <div class="cards-grid">
-        <a href="biology.html" class="card reveal clickable-card">
-          <div class="card-media">
-            <img src="exploration1.jpg" alt="Biology and Ecology" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Biology and Ecology</h3>
-            <p>Field studies, lab work, microscopy, and structured reporting.</p>
-          </div>
-        </a>
-
+        <!-- Trading first -->
         <a href="ai-tools.html" class="card reveal clickable-card">
           <div class="card-media">
             <img src="ai-project-2.png" alt="Trading Systems" loading="lazy">
@@ -90,7 +87,16 @@
           </div>
         </a>
 
-        <!-- REPLACED 3RD CARD: Contact / Access -->
+        <a href="biology.html" class="card reveal clickable-card">
+          <div class="card-media">
+            <img src="exploration1.jpg" alt="Biology and Ecology" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Biology and Ecology</h3>
+            <p>Field studies, lab work, microscopy, and structured reporting.</p>
+          </div>
+        </a>
+
         <a href="contact.html" class="card reveal clickable-card">
           <div class="card-media">
             <img src="exploration2.png" alt="Access and contact" loading="lazy">
@@ -104,52 +110,45 @@
 
     </div>
   </section>
-<section class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <h2>Let Us help Your Business Grow by Going Online, Website Setup & Publishing</h2>
-      <p>Practical web setup services for individuals and small businesses.</p>
-    </div>
 
-    <div class="cards-grid">
-      <div class="card reveal">
-        <div class="card-body">
-          <h3>Simple Websites</h3>
-          <p>
-            Clean, lightweight websites for businesses or personal projects
-            built to load fast and work properly across devices.
-          </p>
+  <!-- Website help section (tightened heading) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Website Setup and Publishing</h2>
+        <p>Practical web setup services for individuals and small businesses.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-body">
+            <h3>Simple Websites</h3>
+            <p>Clean, lightweight websites built to load fast and work properly across devices.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-body">
+            <h3>Domain and DNS</h3>
+            <p>Domain setup, DNS records, and fixes so your site resolves correctly and stays stable.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-body">
+            <h3>Publishing and HTTPS</h3>
+            <p>Publishing, HTTPS setup, and troubleshooting for broken or misconfigured sites.</p>
+          </div>
         </div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-body">
-          <h3>Domain & DNS Configuration</h3>
-          <p>
-            Proper domain setup, DNS records, and configuration fixes so your
-            website actually resolves and stays stable.
-          </p>
-        </div>
-      </div>
-
-      <div class="card reveal">
-        <div class="card-body">
-          <h3>Publishing & HTTPS Setup</h3>
-          <p>
-            Website publishing, secure HTTPS configuration, and troubleshooting
-            for broken or misconfigured sites.
-          </p>
-        </div>
+      <div class="hero-actions" style="margin-top: 18px;">
+        <a href="contact.html" class="btn primary">Request Website Help</a>
       </div>
     </div>
+  </section>
 
-    <div class="hero-actions" style="margin-top: 18px;">
-      <a href="contact.html" class="btn primary">Request Website Help</a>
-    </div>
-  </div>
-</section>
-
-  <!-- BLACK FOOTER (DOMAINS-STYLE) -->
+  <!-- FOOTER (updated copyright line) -->
   <footer class="site-footer site-footer--black">
     <div class="container footer-inner">
       <div class="footer-grid">
@@ -164,8 +163,8 @@
           <p class="footer-title">Explore</p>
           <div class="footer-links">
             <a href="about.html">About</a>
-            <a href="biology.html">Biology Projects</a>
             <a href="ai-tools.html">Trading Systems</a>
+            <a href="biology.html">Biology Projects</a>
             <a href="contact.html">Contact</a>
             <a href="sitemap.xml">Sitemap</a>
           </div>
@@ -191,12 +190,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Eminent Prestige · Mnisi Kholofelo</p>
+        <p>&copy; <span id="year"></span> Eminent Prestige. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
-  <a class="chat-fab" href="contact.html" aria-label="Chat">💬</a>
 
   <script src="script.js"></script>
 
@@ -217,6 +214,13 @@
       transition: transform 250ms ease;
     }
     .clickable-card:hover .card-media img { transform: scale(1.08); }
+
+    /* Put theme toggle inside menu nicely */
+    .nav-theme-item { padding-top: 8px; }
+    .theme-toggle--inmenu {
+      width: 100%;
+      text-align: left;
+    }
   </style>
 
 </body>
