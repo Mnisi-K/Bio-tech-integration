@@ -138,3 +138,4 @@ if (navToggle) {
     document.getElementById("main-nav")?.classList.toggle("open");
   });
 }
+
