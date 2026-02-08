@@ -21,21 +21,21 @@
         </div>
       </div>
 
-      <!-- NAV (always visible, no hamburger) -->
       <nav class="main-nav" id="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-
-          <!-- Trading before Biology -->
-          <li><a href="ai-tools.html">Trading Systems</a></li>
           <li><a href="biology.html">Biology Projects</a></li>
-
+          <li><a href="ai-tools.html">Trading Systems</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- no nav-toggle here -->
+      <button class="theme-toggle" id="theme-toggle" type="button">🌙 Dark</button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -49,7 +49,9 @@
       <div class="hero-text reveal">
         <p class="hero-kicker">Eminent Prestige</p>
         <h1>Precision in Trading and Science.</h1>
-        <p class="hero-subtitle">Biotechnology and intelligent systems.</p>
+        <p class="hero-subtitle">
+          Biotechnology and intelligent systems.
+        </p>
 
         <div class="hero-actions">
           <a href="ai-tools.html" class="btn primary">Trading Systems</a>
@@ -66,18 +68,8 @@
         <p>Select a sector.</p>
       </div>
 
+      <!-- CARDS WITH IMAGES -->
       <div class="cards-grid">
-        <!-- Trading first -->
-        <a href="ai-tools.html" class="card reveal clickable-card">
-          <div class="card-media">
-            <img src="ai-project-2.png" alt="Trading Systems" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Trading Systems</h3>
-            <p>MQL5 automation built for structure, execution, and risk control.</p>
-          </div>
-        </a>
-
         <a href="biology.html" class="card reveal clickable-card">
           <div class="card-media">
             <img src="exploration1.jpg" alt="Biology and Ecology" loading="lazy">
@@ -88,6 +80,17 @@
           </div>
         </a>
 
+        <a href="ai-tools.html" class="card reveal clickable-card">
+          <div class="card-media">
+            <img src="ai-project-2.png" alt="Trading Systems" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Trading Systems</h3>
+            <p>MQL5 automation built for structure, execution, and risk control.</p>
+          </div>
+        </a>
+
+        <!-- REPLACED 3RD CARD: Contact / Access -->
         <a href="contact.html" class="card reveal clickable-card">
           <div class="card-media">
             <img src="exploration2.png" alt="Access and contact" loading="lazy">
@@ -101,45 +104,52 @@
 
     </div>
   </section>
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Let Us help Your Business Grow by Going Online, Website Setup & Publishing</h2>
+      <p>Practical web setup services for individuals and small businesses.</p>
+    </div>
 
-  <!-- Website help section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Website Setup and Publishing</h2>
-        <p>Practical web setup services for individuals and small businesses.</p>
-      </div>
-
-      <div class="cards-grid">
-        <div class="card reveal">
-          <div class="card-body">
-            <h3>Simple Websites</h3>
-            <p>Clean, lightweight websites built to load fast and work properly across devices.</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-body">
-            <h3>Domain and DNS</h3>
-            <p>Domain setup, DNS records, and fixes so your site resolves correctly and stays stable.</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-body">
-            <h3>Publishing and HTTPS</h3>
-            <p>Publishing, HTTPS setup, and troubleshooting for broken or misconfigured sites.</p>
-          </div>
+    <div class="cards-grid">
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>Simple Websites</h3>
+          <p>
+            Clean, lightweight websites for businesses or personal projects
+            built to load fast and work properly across devices.
+          </p>
         </div>
       </div>
 
-      <div class="hero-actions" style="margin-top: 18px;">
-        <a href="contact.html" class="btn primary">Request Website Help</a>
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>Domain & DNS Configuration</h3>
+          <p>
+            Proper domain setup, DNS records, and configuration fixes so your
+            website actually resolves and stays stable.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>Publishing & HTTPS Setup</h3>
+          <p>
+            Website publishing, secure HTTPS configuration, and troubleshooting
+            for broken or misconfigured sites.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
+    <div class="hero-actions" style="margin-top: 18px;">
+      <a href="contact.html" class="btn primary">Request Website Help</a>
+    </div>
+  </div>
+</section>
+
+  <!-- BLACK FOOTER (DOMAINS-STYLE) -->
   <footer class="site-footer site-footer--black">
     <div class="container footer-inner">
       <div class="footer-grid">
@@ -154,8 +164,8 @@
           <p class="footer-title">Explore</p>
           <div class="footer-links">
             <a href="about.html">About</a>
-            <a href="ai-tools.html">Trading Systems</a>
             <a href="biology.html">Biology Projects</a>
+            <a href="ai-tools.html">Trading Systems</a>
             <a href="contact.html">Contact</a>
             <a href="sitemap.xml">Sitemap</a>
           </div>
@@ -181,19 +191,17 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Eminent Prestige. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Eminent Prestige · Mnisi Kholofelo</p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING THEME TOGGLE (replaces chat bubble) -->
-  <button class="theme-fab" id="theme-toggle" type="button" aria-label="Toggle theme">🎨</button>
+  <a class="chat-fab" href="contact.html" aria-label="Chat">💬</a>
 
   <script src="script.js"></script>
 
   <!-- PAGE-SAFE CSS (ONLY FOR INDEX) -->
   <style>
-    /* Cards */
     .card { overflow: hidden; }
     .card-media {
       height: 170px;
@@ -209,43 +217,6 @@
       transition: transform 250ms ease;
     }
     .clickable-card:hover .card-media img { transform: scale(1.08); }
-
-    /* Force nav visible on mobile (no hamburger layout) */
-    @media (max-width: 900px) {
-      .main-nav { display: block !important; }
-      .main-nav ul {
-        display: flex !important;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: flex-start;
-      }
-      .header-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-    }
-
-    /* Floating theme button */
-    .theme-fab {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 54px;
-      height: 54px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: #111;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      z-index: 9999;
-    }
-    .theme-fab:hover { background: #000; }
   </style>
 
 </body>
